@@ -10,7 +10,7 @@ namespace Mission2Assignment
 
             // simulate rolling 2 6d
             // an array to keep track of the number of times each total number is thrown
-            // array aRollNumTotals
+            short[] aRollNumTotals = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         }
     }
 }
