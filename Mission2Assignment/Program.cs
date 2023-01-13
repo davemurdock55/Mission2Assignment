@@ -34,7 +34,7 @@ namespace Mission2Assignment
             Console.WriteLine("Welcome to the dice throwing simulator!");
 
             // Asking the user how many times they want to throw the two dice
-            Console.Write("How many dice rolls would you like to simulate?");
+            Console.Write("\nHow many dice rolls would you like to simulate? ");
 
             // getting the user input 
             iNumRolls = int.Parse(Console.ReadLine());
@@ -50,14 +50,14 @@ namespace Mission2Assignment
                 int die2Result = die2.RollDie();
 
                 // printing the dice roll results
-                Console.WriteLine("Die 1: " + die1Result);
-                Console.WriteLine("Die 2: " + die2Result);
+                // Console.WriteLine("Die 1: " + die1Result);
+                // Console.WriteLine("Die 2: " + die2Result);
 
                 // the diceTotal is the diceTotal plus the sum of the rolled results
                 diceTotal = die1Result + die2Result;
 
                 // printing the totaled roll results for this pass
-                Console.WriteLine("Total: " + diceTotal);
+                // Console.WriteLine("Total: " + diceTotal);
 
                 // a switch statement that adds the diceTotal to the array position corresponding with that dice total
                 // (E.g. If you got a 2 for your roll, case 2 is executed and your diceTotal is added to the current number in position 2 of the array)
@@ -99,13 +99,39 @@ namespace Mission2Assignment
                 }
             }
 
+
             // printing those to test them
             /* for (int iCount = 0; iCount < aRollNumTotals.Length; iCount++)
             {
                 Console.WriteLine((iCount + 2) + ": " + aRollNumTotals[iCount]);
             } */
 
+            Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS");
+            Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
+            Console.WriteLine("Total number of rolls = " + iNumRolls + ".\n");
 
+
+            for (int iCount = 0; iCount < aRollNumTotals.Length; iCount++)
+            {
+                Console.Write((iCount + 2) + ": ");
+                float fRollPercentage = (float)aRollNumTotals[iCount] / (float)iNumRolls;
+                // I think I can just let the system handle this rounding
+
+                int iNumAsterisks = (int)(fRollPercentage * 100);
+
+                // Console.Write("Roll percentage: " + fRollPercentage + "    ");
+                // Console.Write("*: " + iNumAsterisks + "    ");
+                for (int iAsteriskCount = 0; iAsteriskCount < iNumAsterisks; iAsteriskCount++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+
+
+
+            // Telling the user goodbye! :)
+            Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
         }
     }
 }
