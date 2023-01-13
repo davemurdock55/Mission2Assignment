@@ -38,14 +38,38 @@ namespace Mission2Assignment
             // getting the user input 
             iNumRolls = int.Parse(Console.ReadLine());
 
-            // rolling both dice and getting their results
-            int die1Result = die1.RollDie();
-            int die2Result = die2.RollDie();
+            // for every pass, as long as the loop iCount is less than the number of rolls (starting at 0), execute this and then add 1
+            for (int iCount = 0; iCount < iNumRolls; iCount++)
+            {
+                // resetting the dice total to 0 each loop, just in case...
+                diceTotal = 0;
 
-            // the die_total is the die_total plus the sum of the rolled results
-            diceTotal += die1Result + die2Result;
-            
-            
+                // rolling both dice and getting their results
+                int die1Result = die1.RollDie();
+                int die2Result = die2.RollDie();
+
+                // printing the dice roll results
+                Console.WriteLine("Die 1: " + die1Result);
+                Console.WriteLine("Die 2: " + die2Result);
+
+                // the diceTotal is the diceTotal plus the sum of the rolled results
+                diceTotal = die1Result + die2Result;
+
+                // printing the totaled roll results for this pass
+                Console.WriteLine("Total: " + diceTotal);
+
+                // a switch statement that adds the diceTotal to the array position corresponding with that dice total
+                // (E.g. If you got a 2 for your roll, case 2 is executed and your diceTotal is added to the current number in position 2 of the array)
+                switch(diceTotal)
+                {
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                }
+            }
 
             // Console.WriteLine("Die 1: " + die1_result);
             // Console.WriteLine("Die 2: " + die2_result);
