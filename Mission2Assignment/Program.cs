@@ -108,7 +108,7 @@ namespace Mission2Assignment
 
             Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS");
             Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
-            Console.WriteLine("Total number of rolls = " + iNumRolls + ".\n");
+            Console.WriteLine("Total number of rolls = " + iNumRolls + ".");
 
 
             for (int iCount = 0; iCount < aRollNumTotals.Length; iCount++)
@@ -128,10 +128,8 @@ namespace Mission2Assignment
                 Console.WriteLine("");
             }
 
-
-
             // Telling the user goodbye! :)
-            Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
+            Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
         }
     }
 }
