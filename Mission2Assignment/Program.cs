@@ -23,6 +23,7 @@ namespace Mission2Assignment
             // an array to keep track of the number of times each total number is thrown
             int[] aRollNumTotals = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+
             // Initializing 2 dice objects of the Die class
             Die die1 = new Die();
             Die die2 = new Die();
@@ -63,16 +64,47 @@ namespace Mission2Assignment
                 switch(diceTotal)
                 {
                     case 2:
-
+                        aRollNumTotals[0]++;
                         break;
                     case 3:
-
+                        aRollNumTotals[1]++;
+                        break;
+                    case 4:
+                        aRollNumTotals[2]++;
+                        break;
+                    case 5:
+                        aRollNumTotals[3]++;
+                        break;
+                    case 6:
+                        aRollNumTotals[4]++;
+                        break;
+                    case 7:
+                        aRollNumTotals[5]++;
+                        break;
+                    case 8:
+                        aRollNumTotals[6]++;
+                        break;
+                    case 9:
+                        aRollNumTotals[7]++;
+                        break;
+                    case 10:
+                        aRollNumTotals[8]++;
+                        break;
+                    case 11:
+                        aRollNumTotals[9]++;
+                        break;
+                    case 12:
+                        aRollNumTotals[10]++;
                         break;
                 }
             }
 
-            // Console.WriteLine("Die 1: " + die1_result);
-            // Console.WriteLine("Die 2: " + die2_result);
+            // printing those to test them
+            /* for (int iCount = 0; iCount < aRollNumTotals.Length; iCount++)
+            {
+                Console.WriteLine((iCount + 2) + ": " + aRollNumTotals[iCount]);
+            } */
+
 
         }
     }
