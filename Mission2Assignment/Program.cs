@@ -61,42 +61,12 @@ namespace Mission2Assignment
 
                 // a switch statement that adds the diceTotal to the array position corresponding with that dice total
                 // (E.g. If you got a 2 for your roll, case 2 is executed and your diceTotal is added to the current number in position 2 of the array)
-                switch(diceTotal)
-                {
-                    case 2:
-                        aRollNumTotals[0]++;
-                        break;
-                    case 3:
-                        aRollNumTotals[1]++;
-                        break;
-                    case 4:
-                        aRollNumTotals[2]++;
-                        break;
-                    case 5:
-                        aRollNumTotals[3]++;
-                        break;
-                    case 6:
-                        aRollNumTotals[4]++;
-                        break;
-                    case 7:
-                        aRollNumTotals[5]++;
-                        break;
-                    case 8:
-                        aRollNumTotals[6]++;
-                        break;
-                    case 9:
-                        aRollNumTotals[7]++;
-                        break;
-                    case 10:
-                        aRollNumTotals[8]++;
-                        break;
-                    case 11:
-                        aRollNumTotals[9]++;
-                        break;
-                    case 12:
-                        aRollNumTotals[10]++;
-                        break;
-                }
+                
+                // making an integer called index and setting that equal to the dice total minus 2
+                int index = diceTotal - 2;
+                
+                // adding 1 to the array at the "index" spot
+                aRollNumTotals[index]++;
             }
 
 
