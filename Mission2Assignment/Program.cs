@@ -100,6 +100,7 @@ namespace Mission2Assignment
 
             // Telling the user goodbye! :)
             Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
+            Console.ReadLine();
         }
     }
 }
